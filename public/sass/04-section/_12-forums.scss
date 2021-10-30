@@ -1,0 +1,322 @@
+/* ************************
+    04.12: Forums
+    ********************* */
+
+.sb-bbs-topic-head {
+    h4 {
+        margin-bottom: 17px;
+    }
+    .sb-breadcrumb {
+        margin-bottom: 10px;
+    }
+}
+
+.topic-head-meta-item {
+    @extend %title_font;
+    color: #888DA8;
+    &:not(:last-child) {
+        margin-right: 30px;
+        @include mobileLg {
+            margin-right: 0;
+        }
+    }
+    a {
+        color: #888DA8;
+        &.c1 {
+            @extend %c1;
+        }
+    }
+}
+
+.sb-breadcrumb {
+    display: flex;
+    align-items: center;
+    @extend %list-unstyled;
+    li {
+        @extend %title_font;
+        color: #888DA8;
+        &:not(:last-child) {
+            position: relative;
+            padding-right: 10px;
+            margin-right: 10px;
+            &:after {
+                background-image: url(../img/icons/angle-right.svg);
+                position: absolute;
+                right: -3px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 12px;
+                width: 6px;
+                content: "";
+            }
+        }
+        a {
+            color: #888DA8;
+            &:hover {
+                @extend %c1;
+            }
+        }
+    }
+}
+
+.bbp-forum {
+    ul {
+        @extend %list-unstyled;
+        display: flex;
+        align-items: center;
+
+        li {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            &:first-child {
+                flex: 3;
+                @include mobileLg {
+                    flex: 1;
+                }
+            }
+            &:last-child {
+                flex: 2;
+                @include mobileLg {
+                    flex: 1;
+                }
+            }
+        }
+    }
+    .bbp-forum-header {
+        margin-bottom: 16px;
+        ul, .forum-titles {
+            li {
+                color: #888DA8;
+                @extend %title_font;
+                @include mobileLg {
+                    justify-content: center;
+                }
+                &:not(:first-child) {
+                    @include mobileLg {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .bbp-forum-body {
+        > ul, .forum-topics {
+            border: 1px solid #E9F1FD;
+            padding: 30px;
+            @extend %radius-10;
+            position: relative;
+            overflow: hidden;
+            @include mobileLg {
+                flex-direction: column;
+            }
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            li {
+                @include mobileLg {
+                    flex: 1;
+                    flex-direction: column;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+                .img {
+                    margin-right: 15px;
+                    @include mobileLg {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+                .content {
+                    h5 {
+                        @extend %medium;
+                        margin-bottom: 2px;
+                    }
+                    h6 {
+                        @extend %regular;
+                        margin-bottom: 1px;
+                    }
+                    P, p a {
+                        color: #888DA8;
+                        font-size: 14px;
+                    }
+                    @include mobileLg {
+                        text-align: center;
+                    }
+                }
+                &:last-child {
+                    .img {
+                        margin-right: 10px;
+                        width: 28px;
+                        height: 28px;
+                        overflow: hidden;
+                        display: block;
+                        @extend %radius;
+                        img {
+                            @extend %radius;
+                        }
+                    }
+                    .content {
+                        P, p a {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &:not(:last-child),
+                &:not(:first-child) {
+                    font-size: 14px;
+                    color: #4F5164;
+                }
+                &.pin {
+                    position: absolute;
+                    right: 7px;
+                    top: -14px;
+                    width: 15px;
+                    height: 55px;
+                    @extend %c1-bg;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform: rotate(-45deg);
+
+                    svg {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+} 
+
+.bbp-replies,
+.bbp-reviews {
+    border: 1px solid #E9F1FD;
+    @extend %radius-10;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.bbp-reviews {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.bbp-replies-head,
+.bbp-reviews-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 30px 25px;
+    border-bottom: 1px solid #E9F1FD;
+    @include mobileSm {
+        flex-direction: column;
+        padding: 15px;
+    }
+    p, a {
+        color: #888DA8;
+        @extend %title_font;
+    }
+    a:hover {
+        @extend %c1;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        @include mobileSm {
+            margin-bottom: 10px;
+        }
+        .img {
+            display: block;
+            margin-right: 16px;
+            width: 40px;
+            height: 40px;
+            @extend %radius;
+            position: relative;
+            img {
+                width: 40px;
+                height: 40px;
+                @extend %radius;
+            }
+            .avatar-status {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+            }
+        }
+        .info {
+            .author_name {
+                @extend %medium;
+            }
+            span {
+                font-size: 14px;
+                color: #888DA8;
+            }
+        }
+    }
+}
+
+.bbp-reviews-head {
+    padding: 15px 30px;
+    @include mobileSm {
+        padding: 15px;
+    }
+}
+
+.bbp-replies-body,
+.bbp-reviews-body {
+    display: flex;
+    padding: 30px 30px 27px;
+    @include mobileSm {
+        flex-direction: column;
+        padding: 20px 15px;
+        text-align: center;
+    }
+    .bbp-reply-img {
+        margin-right: 15px;
+        display: block;
+        width: 35px;
+        min-width: 35px;
+        height: 35px;
+        @extend %radius;
+        position: relative;
+        @include mobileSm {
+            margin-right: 0;
+            margin: 0 auto 15px;
+        }
+        img {
+            @extend %radius;
+        }
+        .avatar-status {
+            top: 1px;
+            left: 1px;
+            position: absolute;
+        }
+    }
+    .bbp-reply-content {
+        .author_name {
+            margin-bottom: 2px;
+        }
+        .list-dot-inline {
+            @include mobileSm {
+                justify-content: center;
+            }
+        }
+        p {
+            color: #888DA8;
+        }
+    }
+}
+
+.bbp-reviews-body {
+    padding: 24px 30px 27px;
+    @include mobileSm {
+        padding: 14px 15px 17px;
+    }
+    p {
+        color: #888DA8;
+    }
+}

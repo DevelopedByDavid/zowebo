@@ -1,0 +1,40 @@
+/* ************************
+   04.3: Create Account
+   ********************* */
+   .create-account {
+       background-color: #FF5934;
+       overflow: hidden;
+   }
+
+   .create-account-content {
+       .feature-list {
+           margin-bottom: 43px;
+       }
+       @include tab {
+            margin-bottom: 60px;
+        }
+   }
+
+   .create-account-img {
+       padding-left: 40px;
+       position: relative;
+       @include medium {
+           padding-left: 0;
+       }
+        img {
+            max-width: initial;
+            @include tab {
+                max-width: 100%;
+            }
+        }
+
+        .dot-shape {
+            position: absolute;
+            right: -255px;
+            bottom: -60px;
+            @include tab {
+                right: -15px;
+                bottom: -15px;
+            }
+        }
+    }

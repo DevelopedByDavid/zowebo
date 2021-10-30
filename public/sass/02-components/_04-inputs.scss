@@ -1,0 +1,42 @@
+/* ************************
+   03.4: Inputs
+   ********************* */
+ 
+   .show-pass {
+      width: 60px;
+      min-width: 60px;
+      height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border: 1px solid #E7ECF5;
+      border-radius: 3px;
+      margin-left: 10px;
+      cursor: pointer;
+   }
+
+   .register-form {
+      .register-title {
+         margin-bottom: 24px;
+      }
+      p {
+         margin-bottom: 30px;
+      }
+      textarea.form-control {
+         height: 200px;
+      }
+   }
+
+   .profile-edit-form {
+      .form-control {
+         height: 30px;
+         font-size: 14px;
+         padding: 5px 10px;
+      }
+      textarea {
+         &.form-control {
+            height: 80px;
+         }
+      }
+   }

@@ -1,0 +1,88 @@
+/* ************************
+   02.3: Social List
+   ********************* */
+   .footer-socials {
+      text-align: center;
+      @include customMq(576px, 991px) {
+         text-align: right;
+      }
+      a {
+         width: 50px;
+         height: 50px;
+         background-color: rgba($c1, 0.1);
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+         @extend %radius;
+         &:not(:last-child) {
+            margin-right: 10px;
+         }
+      }
+
+      &.style--two {
+         a {
+            background-color: rgba($c2, 0.09);
+            svg path {
+               fill: $c2;
+            }
+         }
+      }
+   }
+   
+   .socials {
+      text-align: center;
+      a {
+         width: 30px;
+         height: 30px;
+         background-color: rgba($c1, 0.1);
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+         @extend %radius;
+         padding: 8px;
+         &:not(:last-child) {
+            margin-right: 10px;
+            @include mobileLg {
+               margin-right: 8px;
+            }
+         }
+         &:hover {
+            @extend %c1-bg;
+            svg {
+               path {
+                  fill: $white;
+               }
+            }
+         }
+      }
+   }
+
+   .social-list {
+      @extend .list-unstyled;
+      display: flex;
+      justify-content: flex-end;
+      @include mobileLg {
+         justify-content: center;
+      }
+      li {
+         a {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(#ffffff, 0.09);
+            @include mobileLg {
+               border: none;
+            }
+            svg path {
+               fill: $white;
+            }
+            &:hover {
+               svg path {
+                  fill: $c1;
+               }
+            }
+         }
+      }
+   }

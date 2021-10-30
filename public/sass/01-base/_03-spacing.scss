@@ -1,0 +1,51 @@
+/* ************************
+   01.3: Spacing
+   ********************* */
+
+// Paddings
+$p-list: 120, 100, 90, 60, 40, 30;
+$tab: 60;
+
+// Padding Top
+@each $padding in $p-list {
+    .pt-#{$padding} {
+        padding-top: $padding + px;
+        @include tab{
+            @if $padding > $tab {
+                padding-top: ($padding - $tab) + px;
+            } @else {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+// Padding Bottom
+@each $padding in $p-list {
+    .pb-#{$padding} {
+        padding-bottom: $padding + px;
+        @include tab{
+            @if $padding > $tab {
+                padding-bottom: ($padding - $tab) + px;
+            } @else {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+
+$m-list: 40, 30, 20, 10;
+
+// Margin Top
+@each $margin in $m-list {
+    .mt-#{$margin} {
+        margin-top: $margin + px;
+    }
+}
+// Margin Bottom
+@each $margin in $m-list {
+    .mb-#{$margin} {
+        margin-bottom: $margin + px;
+    }
+}

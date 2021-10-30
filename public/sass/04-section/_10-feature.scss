@@ -1,0 +1,57 @@
+/* ************************
+    04.10: Feature
+    ********************* */
+
+
+    .single-feature {
+        box-shadow: 0px 0px 1px #c9c9c9;
+        padding: 45px 40px;
+        @include mobileLg {
+            padding: 25px 20px;
+        }
+        @extend %trans5;
+        &.active {
+            box-shadow: 10px 10px 90px rgba(#000000, 0.07);
+        }
+
+        .img {
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            @extend %trans3;
+            &:hover {
+                @extend %c2;
+            }
+        }
+        &.style2 {
+            text-align: center;
+            @extend %radius-10;
+            padding: 60px 30px;
+            @extend %trans3;
+            margin-bottom: 20px;
+            box-shadow: none;
+            .img {
+                margin-bottom: 30px;
+            }
+            h3 {
+                &:hover {
+                    @extend %c1;
+                }
+            }
+            &:hover,
+            &.active {
+                @extend %box-shadow3;
+            }
+        }
+        &.box-style {
+            padding: 45px 40px 40px;
+            @include mobileLg {
+                padding: 25px 20px;
+            }
+            .img {
+                margin-bottom: 30px;
+            }
+        }
+    }

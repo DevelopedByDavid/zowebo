@@ -1,0 +1,38 @@
+/* ************************
+    04.7: Join Us
+    ********************* */
+    .join-us {
+        overflow: hidden;
+    }
+
+    .join-us-content {
+        @include tab {
+            margin-bottom: 40px;
+        }
+    }
+
+    .join-us-content-list {
+        @extend %list-unstyled;
+        margin-bottom: 42px;
+        li {
+            &:not(:last-child) {
+                margin-bottom: 27px;
+            }
+            h3 {
+                margin-bottom: 13px;
+            }
+        }
+    }
+
+    .join-us-img {
+        margin-left: 10px;
+        @include tab {
+            margin-left: 0;
+        }
+        img {
+            max-width: initial;
+            @include tab {
+                max-width: 100%;
+            }
+        }
+    }

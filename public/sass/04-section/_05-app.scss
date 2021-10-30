@@ -1,0 +1,151 @@
+/* ************************
+   04.5: App
+   ********************* */
+
+    .app {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 678px;
+        display: flex;
+        align-items: center;
+        background-image: url(../img/bg/app_bg1.png);
+        @include tab {
+            background: #F2F6FF;
+            min-height: auto;
+        }
+        &.style--two {
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            // min-height: 1100px;
+            display: flex;
+            align-items: center;
+            // margin-bottom: 40px;
+            @include tab {
+                background: #F2F6FF !important;
+                min-height: auto;
+                margin-bottom: 60px;
+            }
+            .app-thumb {
+                img {
+                    margin: -125px 0 -245px;
+                    position: relative;
+                    right: 14px;
+                    max-width: initial;
+                    @include medium {
+                        right: 104px;
+                    }
+                }
+                @include tab {
+                    display: none;
+                }
+            }
+        }
+        &.style--three {
+            min-height: auto;
+            overflow: hidden;
+            @include tab {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+            .app-img {
+                img {
+                    max-width: initial;
+                }
+                @include tab {
+                    display: none;
+                }
+            }
+        }
+        &.section-bg {
+            background:#F4F7FF;
+        }
+        .section-title {
+            margin-top: -12px;
+        }
+    }
+
+    .app-btn-group {
+        a {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        &.style--two {
+            display: inline-flex;
+            @include mobileMd {
+                flex-direction: column;
+                justify-content: center;
+            }
+            a {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                    @include mobileMd {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .app-store2 {
+            box-shadow: 10px 10px 60px rgba(#000000, 0.10);
+            display: inline-block;
+            @extend %radius-5;
+        }
+    }
+
+    .app-statistics {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 45px;
+        margin-bottom: -20px;
+        .single-statistics {
+            box-shadow: 5px 5px 20px rgba(#000000, 0.05);
+            @extend %radius-5;
+            @extend %white-bg;
+            padding: 20px;
+            width: 165px;
+            height: 156px;
+            text-align: center;
+            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            h3 {
+                background: #2766f7;
+                background: -moz-linear-gradient(-45deg,  #2766f7 0%, #14337c 100%);
+                background: -webkit-linear-gradient(-45deg,  #2766f7 0%,#14337c 100%);
+                background: linear-gradient(135deg,  #2766f7 0%,#14337c 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2766f7', endColorstr='#14337c',GradientType=1 );
+                width: 85px;
+                height: 85px;
+                @extend %radius-10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @extend %white;
+                margin: 0 auto 13px;
+            }
+            &.premium {
+                h3 {
+                    background: #FF6065;
+                    background: -moz-linear-gradient(-45deg,  #FF6065 0%, #FF3D4E 100%);
+                    background: -webkit-linear-gradient(-45deg,  #FF6065 0%,#FF3D4E 100%);
+                    background: linear-gradient(135deg,  #FF6065 0%,#FF3D4E 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF6065', endColorstr='#FF3D4E',GradientType=1 );
+                }
+            }
+            &.review {
+                h3 {
+                    background: #F8AF77;
+                    background: -moz-linear-gradient(-45deg,  #F8AF77 0%, #F7884A 100%);
+                    background: -webkit-linear-gradient(-45deg,  #F8AF77 0%,#F7884A 100%);
+                    background: linear-gradient(135deg,  #F8AF77 0%,#F7884A 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F8AF77', endColorstr='#F7884A',GradientType=1 );
+                }
+            }
+        }
+    }

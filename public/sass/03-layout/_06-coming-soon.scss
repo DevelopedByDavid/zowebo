@@ -1,0 +1,103 @@
+/* ************************
+   03.6: Coming Soon
+   ********************* */
+
+.coming-soon {
+    position: relative;
+    z-index: 1;
+    &:after {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #FF5934;
+        opacity: 0.95;
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+}
+
+.coming-soon-content {
+    text-align: center;
+
+    h1 {
+        font-size: 72px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 60px;
+    }
+
+    h5 {
+        @extend %regular;
+        margin-bottom: 30px;
+    }
+}
+
+.coming-soon-newsletter {
+    max-width: 480px;
+    margin: 0 auto;
+
+    margin-bottom: 50px;
+
+    .input-group {
+        @extend %radius-5;
+        overflow: hidden;
+
+        .form-control {
+            &::placeholder {
+                color: #565969 !important;
+                opacity: .25;
+            }
+        }
+
+        .btn {
+            background-color: #4F5164;
+            font-size: 14px;
+            @extend %regular;
+            padding: 10px 26px;
+        }
+    }
+}
+
+#countdown {
+    @extend %list-unstyled;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    li {
+        border: 1px solid $white;
+        @extend %radius-10;
+        width: 160px;
+        height: 168px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        @include mobileSm {
+            margin-left: 7px;
+            margin-right: 7px;
+            margin-bottom: 14px;
+            width: 140px;
+            height: 148px;
+        }
+
+        h2 {
+            font-size: 60px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        span {
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+    }
+}

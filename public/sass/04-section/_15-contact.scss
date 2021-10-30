@@ -1,0 +1,42 @@
+/* ************************
+    04.15: Contact
+    ********************* */
+
+    .contact-form-wrap {
+        .contact-form-title {
+            margin-bottom: 24px;
+        }
+        @extend %radius-5;
+        background-color: #FF5934;
+        padding: 60px 45px;
+
+        h2, p {
+            @extend %white;
+        }
+        h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .contact-form {
+        .form-group {
+            margin-bottom: 30px;
+        }
+        .form-control {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(#ffffff, 0.5);
+            padding-left: 0;
+            padding-right: 0;
+            @extend %white;
+            border-radius: 0px;
+            &::placeholder {
+                color: #fff !important;
+                opacity: .5;
+            }
+        }
+        textarea.form-control {
+            height: 100px;
+        }
+    }

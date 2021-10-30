@@ -1,0 +1,22 @@
+<svg id="communication" xmlns="http://www.w3.org/2000/svg" width="19.999" height="19.999" viewBox="0 0 19.999 19.999">
+  <g id="Group_6361" data-name="Group 6361" transform="translate(3.75 3.75)">
+    <g id="Group_6360" data-name="Group 6360">
+      <path id="Path_6981" data-name="Path 6981" d="M104.124,96h-7.5a.625.625,0,1,0,0,1.25h7.5a.625.625,0,0,0,0-1.25Z" transform="translate(-96 -96)" fill="#4f5164"/>
+    </g>
+  </g>
+  <g id="Group_6363" data-name="Group 6363" transform="translate(3.75 6.25)">
+    <g id="Group_6362" data-name="Group 6362">
+      <path id="Path_6982" data-name="Path 6982" d="M101.625,160h-5a.625.625,0,1,0,0,1.25h5a.625.625,0,1,0,0-1.25Z" transform="translate(-96 -160)" fill="#4f5164"/>
+    </g>
+  </g>
+  <g id="Group_6365" data-name="Group 6365" transform="translate(0 0)">
+    <g id="Group_6364" data-name="Group 6364">
+      <path id="Path_6983" data-name="Path 6983" d="M13.749,0H2.5A2.5,2.5,0,0,0,0,2.5V15a.624.624,0,0,0,.36.566.634.634,0,0,0,.265.059.625.625,0,0,0,.4-.145L4.6,12.5h9.148a2.5,2.5,0,0,0,2.5-2.5V2.5A2.5,2.5,0,0,0,13.749,0ZM15,10a1.251,1.251,0,0,1-1.25,1.25H4.375a.624.624,0,0,0-.4.145L1.25,13.665V2.5A1.251,1.251,0,0,1,2.5,1.25H13.749A1.251,1.251,0,0,1,15,2.5Z" fill="#4f5164"/>
+    </g>
+  </g>
+  <g id="Group_6367" data-name="Group 6367" transform="translate(5 5)">
+    <g id="Group_6366" data-name="Group 6366">
+      <path id="Path_6984" data-name="Path 6984" d="M140.5,128a.625.625,0,0,0,0,1.25,1.251,1.251,0,0,1,1.25,1.25v10.573l-2.11-1.687a.629.629,0,0,0-.39-.136H130.5a1.251,1.251,0,0,1-1.25-1.25v-.625a.625.625,0,1,0-1.25,0V138a2.5,2.5,0,0,0,2.5,2.5h8.529l2.954,2.364a.625.625,0,0,0,1.016-.489V130.5A2.5,2.5,0,0,0,140.5,128Z" transform="translate(-128 -128)" fill="#4f5164"/>
+    </g>
+  </g>
+</svg>

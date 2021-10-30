@@ -1,0 +1,82 @@
+/* ************************
+   04.4: Price
+   ********************* */
+
+    .single-price {
+        @extend %box-shadow;
+        @extend %radius-5;
+        @extend %white-bg;
+        @extend %trans3;
+        padding: 60px 45px;
+        margin-bottom: 30px;
+        &:hover {
+            @extend %box-shadow3;
+        }
+
+        &.style2 {
+            .price-head {
+                .price {
+                    color: #2766F7;
+                }
+            }
+        }
+    }
+
+    .price-head {
+        margin-bottom: 27px;
+        img {
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            &:not(.price) {
+                margin-bottom: 18px;
+                span {
+                    @extend %regular;
+                }
+            }
+        }
+        .price {
+            @extend %medium;
+            @extend %c1;
+        }
+    }
+
+    .price-body {
+        ul {
+            margin-bottom: 25px;
+            li {
+                border-bottom: 1px solid rgba(#707070, .09);
+                padding: 10px 0;
+                color: #4F5164;
+
+                &.line {
+                    text-decoration: line-through;
+                }
+
+                &:first-child {
+                    border-top: 1px solid rgba(#707070, .09);
+                }
+            }
+        }
+        .btn.c3 {
+            @extend %c2-bg;
+            &:hover {
+                @extend %c1-bg;
+            }
+        }
+        .btn.c2 {
+            @extend %title-color-bg;
+            @extend %radius-50;
+            text-transform: capitalize;
+            &:hover {
+                @extend %c2-bg;
+            }
+        }
+    }
+
+    .payment-info {
+        p {
+            font-size: 18px;
+        }
+    }

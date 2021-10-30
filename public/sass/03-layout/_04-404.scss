@@ -1,0 +1,66 @@
+/* ************************
+   03.4: 404
+   ********************* */
+
+   .error-content {
+      @extend %radius-10;
+      @extend %white-bg;
+      padding: 40px;
+      @include mobileSm {
+         padding: 20px 15px;
+      }
+
+      .search-area,
+      .error-area {
+         @extend %radius-10;
+         border: 1px solid #E9F1FD;
+      }
+
+      .search-area {
+         margin-bottom: 40px;
+         padding: 30px;
+         @include mobileSm {
+            padding: 20px 15px;
+         }
+      }
+
+      .search-form {
+         form {
+            display: flex;
+            max-width: 610px;
+            margin-left: auto;
+            .form-group {
+               margin-bottom: 0;
+               &:not(:last-child) {
+                  margin-right: 10px;
+               }
+               .form-control {
+                  height: 40px;
+               }
+               .btn {
+                  font-size: 14px;
+                  padding: 12px 22px;
+               }
+            }
+         }
+      }
+
+      .error-area {
+         text-align: center;
+         padding: 60px 15px 30px;
+         img {
+            margin-bottom: 20px;
+         }
+         h3 {
+            letter-spacing: 1.5px;
+            @extend %regular;
+            margin-bottom: 20px;
+         }
+         .btn-link {
+            font-size: 18px;
+            @extend %title_font;
+            @extend %medium;
+            @extend %c1;
+         }
+      }
+   }
